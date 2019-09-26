@@ -1,10 +1,15 @@
 import React from 'react'
+import ItemsContainer from './ItemsContainer'
 
-const CategoryName = () => {
+const CategoryName = ({ name, cards }) => {
     return (
-        <div>
-            
-        </div>
+        name.map(e => (
+            <div>
+                <a href="#" class="btn"><h3>{e}</h3></a>  
+                <ItemsContainer products={cards} name={e}/>        
+            </div>  
+        ))
+        
     )
 }
 
