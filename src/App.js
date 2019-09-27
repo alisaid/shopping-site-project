@@ -1,9 +1,12 @@
 import React from 'react';
 import './App.css';
+import CategoryContainer from './components/CategoryContainer'
 
 function App() {
   return (
-   <div>Hello World</div> 
+   <div>
+    <CategoryContainer />
+   </div> 
     );
 }
 
