@@ -1,13 +1,17 @@
 import React from 'react'
 import Items from './Items'
 
-const ItemsContainer = ({ name, products }) => {
+const ItemsContainer = ({products}) => {
     console.log(products)
     return (
         <div>
-            <Items product={products}/>            
+            {products.map(product => (
+                <div className="col-md-3">
+                    <Items product={product} />            
+                </div>            
+            ))}
         </div>
-    )
+        )    
 }
 
 export default ItemsContainer
