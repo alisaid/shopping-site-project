@@ -1,4 +1,4 @@
-:root {
+ :root {
     --header-background-color:#Fff;
     --primary-color: #2D3D60;
     --secondary-color:#53607C;
@@ -42,7 +42,7 @@ img {
 
 /** HEADER **/
 
-.navbar {
+ .navbar {
     position: fixed;
     width: 100%;
     height: 70px;
@@ -133,8 +133,10 @@ img {
 }
 
 /**SECTION**/
+
 section .container {
     margin-bottom: 3rem;
+
 }
 
     
@@ -151,32 +153,38 @@ section .container {
     height: 15rem;
 }
 
+.section-b .category-wrapper{
+    margin: 25px 0;
+}
+.section-b .row{
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 15px;
+}
+
 .section-b .container a h3 {
     font-weight: bolder;
+
 }
 
-.section-b .card {
-    position: relative;
+.section-b .card{
+    height: 100%;
 }
-
 .section-b .card .face {
     transition: 0.5s;
+    
 }
 
 .section-b .card .face.face1{
-    position: relative;
-    display: flex;
+
     align-items: center;
     justify-content: center;
     z-index: 1;
 }
 
 .section-b .card .face.face2 {
-    position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
+
 }
 
 .section-b .card .face.face2 a {
@@ -196,5 +204,4 @@ section .container {
 .section-b .card .face.face2 a:focus {
     border: none;
     outline: none;
-}
-
+} 
