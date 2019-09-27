@@ -5,7 +5,7 @@ const Category = props => {
   return (
     <div className="container">
       {props.cards.map(e => (
-        <div  key={e.id} className="row">
+        <div  key={e.id} >
         <a href="#" className="btn"><h3>{e.name}</h3></a>  
         <ItemsContainer products={e.items}/>    
         </div>

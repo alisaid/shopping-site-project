@@ -169,11 +169,6 @@ section .container {
     align-items: center;
     justify-content: center;
     z-index: 1;
-    transform: translateY(60px);
-}
-
-.section-b .card:hover .face.face1 {
-    transform: translateY(0)
 }
 
 .section-b .card .face.face2 {
@@ -182,10 +177,6 @@ section .container {
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    transform: translateY(-60px)
-}
-.section-b .card:hover .face.face2 {
-    transform: translateY(0)
 }
 
 .section-b .card .face.face2 a {
