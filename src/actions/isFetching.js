@@ -1,10 +1,7 @@
-const requestProducts = (filter) => ({
+export const requestProducts = () => ({
     type: 'REQUEST_PRODUCTS',
-    filter    
 })
 
-const recieveProducts = (filter, response) => ({
+export const recieveProducts = () => ({
     type: 'RECIEVE_PRODUCTS',
-    filter,
-    response
 })
