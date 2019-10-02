@@ -3,7 +3,7 @@ import Category from "./Category";
 import axios from "axios";
 import { connect } from 'react-redux'
 import IsFetching from './IsFetching';
-import { requestProducts, recieveProducts } from '../actions/isFetching'
+import { requestProducts, recieveProducts } from '../actions/isFetching';
 
 const CategoryContainer = (props) => {
   
@@ -12,7 +12,7 @@ const CategoryContainer = (props) => {
     props.dispatch(requestProducts())
     async function fetchData() {
       try {
-        const results = await axios.get("https://products-data.herokuapp.com/api/allProducts");
+        const results = await axios.get("https://products-data.herokuapp.com/api/allProducts");        
         console.log(results);
         setCards(results.data)
         setTimeout(() => {     
@@ -24,7 +24,8 @@ const CategoryContainer = (props) => {
     }
     fetchData();
   }, []);
-  const [cards, setCards] = useState([]);
+  
+  const [cards, setCards] = useState([])
 
   return (
     <div>
