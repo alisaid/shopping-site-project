@@ -1,6 +1,5 @@
 {
-  "name": "projects",
-  "url":"github.com",
+  "name": "shopping-sites-project",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
