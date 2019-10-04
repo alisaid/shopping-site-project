@@ -1,23 +1,9 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React, { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
+import { connect } from 'react-redux'
 
-const CarouselContainer = () => {
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const categoryData = await axios.get(
-          "https://products-data.herokuapp.com/api/getCategoryList"
-        );
-        setCarouselData(categoryData.data);
-      } catch (e) {
-        console.log(e);
-      }
-    }
-    fetchData();
-  }, []);
+const CarouselContainer = (props) => {
 
-  const [carouselData, setCarouselData] = useState([]);
   const [index, setIndex] = useState(0);
   const [direction, setDirection] = useState(null);
 
@@ -35,7 +21,7 @@ const CarouselContainer = () => {
             direction={direction}
             onSelect={handleSelect}
           >
-            {carouselData.map(e => (
+            {props.data.carouselData.map(e => (
               <Carousel.Item key={e.id}>
                 <img
                   className="d-block w-100"
@@ -54,4 +40,10 @@ const CarouselContainer = () => {
   );
 };
 
-export default CarouselContainer;
+const mapStateToProps = (state) => {
+  return {
+    data: state.allData,
+  };
+};
+
+export default connect(mapStateToProps)(CarouselContainer);

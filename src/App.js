@@ -8,7 +8,7 @@ import CarouselContainer from './components/CarouselContainer'
 function App(props) {
 
   useEffect(() => {
-    console.log("first effect");    
+    console.log("first effect");   
     props.dispatch(requestAllData)    
   }, []);
 
