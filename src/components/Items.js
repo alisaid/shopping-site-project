@@ -29,9 +29,9 @@ const Items = ({ product}) => {
       </div>
       
       <div className="card-body face face2">
-        <a href="#" className="btn btn-primary">
+        <a href="/" className="btn btn-primary">
           <div className="name">{limitProductTitle(product.name)}</div>
-          <div className="price">{product.price}</div>
+          <div className="price">£{product.price}</div>
         </a>
       </div>
     </div>
