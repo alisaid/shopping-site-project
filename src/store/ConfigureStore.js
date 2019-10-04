@@ -1,12 +1,13 @@
-import { createStore, combineReducers} from 'redux'
-import isFetching from '../reducers/isFetching'
+import { createStore, combineReducers, applyMiddleware } from 'redux'
+import thunk from 'redux-thunk'
+import allData from './reducers/allData'
 
-
+const middleware = applyMiddleware(thunk)
 export default () => {
     const store = createStore (
         combineReducers({
-            isFetching: isFetching
-        })
+            allData: allData
+        }), middleware
     );
     return store
 }
