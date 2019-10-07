@@ -2,12 +2,10 @@ import React from "react";
 import Items from "./Items";
 
 const ItemsContainer = ({ products }) => {
-  const start = 0;
-  const end = 4;
-  
-  return (
+  console.log(products)
+  return   (
     <div className="row">
-      {products.slice(start, end).map(product => (
+      {products.map(product => (
         <div className="col-md-3" key={product.id}>
           <Items product={product} />
         </div>
