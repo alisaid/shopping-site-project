@@ -1,27 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import { connect } from "react-redux";
 import { setSearchText, getSearchResult } from "../store/actions/search";
-import axios from "axios";
 
 const HeaderSearch = props => {
-  const [inputSearch, setInputSearch] = useState("");
-  console.log(inputSearch);
-
+  
   const searchSubmit = e => {
     e.preventDefault();
     console.log("submitted!");
-
-    axios
-      .get(
-        `https://products-data.herokuapp.com/api/searchProduct&searchKeyword=${props.search.text}`
-      )
-      .then(data => {
-        props.dispatch(getSearchResult(data));
-      })
-      .catch(e => {
-        console.log(e);
-      });
+    props.dispatch(getSearchResult)    
   };
+
   return (
     <div>
       <form
