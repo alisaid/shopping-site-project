@@ -1,8 +1,9 @@
 import React from "react";
 import HeaderLogo from "./HeaderLogo";
 import HeaderSearch from "./HeaderSearch";
+import { connect } from 'react-redux'
 
-const Header = () => {
+const Header = (props) => {
   return (
     <div>
       <nav className="navbar fixed-top">
@@ -17,6 +18,7 @@ const Header = () => {
             <a href="#">
               <i className="fas fa-cart-arrow-down fa-2x"></i>
             </a>
+           <p> {props.data.length}</p>
           </div>
         </div>
       </nav>
@@ -24,4 +26,8 @@ const Header = () => {
   );
 };
 
-export default Header;
+const mapStateToProps = (state) => {
+  return{data: state.cart}
+}
+
+export default connect(mapStateToProps)(Header);
