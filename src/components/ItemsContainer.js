@@ -2,7 +2,6 @@ import React from "react";
 import Items from "./Items";
 
 const ItemsContainer = ({ products }) => {
-  console.log(products)
   return   (
     <div className="row">
       {products.map(product => (
