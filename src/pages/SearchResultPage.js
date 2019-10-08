@@ -4,8 +4,10 @@ import ItemsContainer from "../components/ItemsContainer";
 
 const SearchResultPage = props => {
   return (
-    <div>
-      <ItemsContainer products={props.data.searchResults} />
+    <div className="section-b">
+      <div className="container">
+        <ItemsContainer products={props.data.searchResults} />
+      </div>
     </div>
   );
 };

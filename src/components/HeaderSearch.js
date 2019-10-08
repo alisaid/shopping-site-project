@@ -10,12 +10,9 @@ const HeaderSearch = props => {
   const searchSubmit = e => {
     e.preventDefault();
     props.dispatch(getSearchResult);
-    setRedirect(true);
-    setTimeout(() => {
-      setRedirect(false);
-    }, 1000);
+    setRedirect(true);    
   };
-
+  
   return (
     <div>
       <form
@@ -40,7 +37,7 @@ const HeaderSearch = props => {
           </button>
         </div>
       </form>
-      {redirect && <Redirect to={`/search/${props.search.text}`} />}
+      {redirect && (props.search.searchResults.length > 0 ? <Redirect to={`/search/${props.search.text}`} /> : <Redirect to='/404' />)}
     </div>
   );
 };

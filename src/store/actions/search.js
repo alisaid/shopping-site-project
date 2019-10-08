@@ -12,8 +12,6 @@ export const getSearchResult = (dispatch, getState) => {
       `https://products-data.herokuapp.com/api/searchProduct&searchKeyword=${state.search.text}`
     )
     .then(data => {
-      console.log(data);
-
       dispatch({
         type: "SET_SEARCH_RESULTS",
         searchResults: data.data

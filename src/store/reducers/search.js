@@ -10,7 +10,7 @@ export default (state = searchReducerDefaultState, action) => {
             return state = {...state, text:action.text}
         }
         case 'SET_SEARCH_RESULTS': {
-            return state = {...state, searchResults: action.searchResults}
+            return state = {...state, searchResults: action.searchResults}            
         }
         case 'ERROR': {
             return state = {...state, error: action.searchResults}
