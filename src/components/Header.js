@@ -9,7 +9,7 @@ const Header = (props) => {
       <nav className="navbar fixed-top">
         <div className="container">
           <HeaderLogo />
-          <HeaderSearch />
+          <HeaderSearch history={props.history}/>
 
           <div className="nav">
             <a href="#">
