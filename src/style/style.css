@@ -1,6 +1,6 @@
  :root {
     --header-background-color:#Fff;
-    --primary-color: #2D3D60;
+    --primary-color: #444442;
     --secondary-color:#53607C;
     --overlay-color: rgb(0,0,0,0.7);
     --text-color: #2D3D60;
@@ -17,8 +17,7 @@ body {
     line-height: 1.6;
     font-size: 1.1rem;
     padding-top: 80px;
-    background:#ffb8b8
-}
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);}
 
 h1,h2,h3,h4 {
     line-height: 1.3;
@@ -27,6 +26,11 @@ h1,h2,h3,h4 {
 a{
     color: var(--secondary-color);
     text-decoration:none;
+}
+
+a:focus {
+    outline: none;
+    box-shadow: 0 0 3px var(--primary-color)
 }
 
 img {
@@ -38,6 +42,11 @@ img {
     margin:auto;
     overflow: hidden;
     padding:0 2rem;
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: 0 0 3px var(--primary-color)
 }
 
 /**ISLOADING**/
@@ -201,12 +210,14 @@ img {
 /**SECTION**/
 
 section .container {
-    margin-bottom: 3rem;
+    margin-bottom: 3rem;    
 }
 
     
 .section-a {
-    margin: 3rem 0;
+    margin: 3rem auto;
+    width: 50rem;
+
 }
 
 .section-a img {
@@ -249,13 +260,14 @@ section .container {
 
 .section-b .card .face.face2 {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-
+    align-items: center;
+    height: 7rem
 }
 
 .section-b .card .face.face2 a {
     display: inline-block;
-    background-color: var(--primary-color);
     border: none;
     outline: none;
     text-decoration: none;
@@ -263,11 +275,33 @@ section .container {
 
 }
 
-.section-b .card .face.face2 a:hover {
-    background-color: var(--secondary-color)
+.section-b .card .face.face2 .btn {
+    background: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    border:none;
 }
 
-.section-b .card .face.face2 a:focus {
-    border: none;
-    outline: none;
-} 
+.section-b .card .face.face2 .btn:hover {
+    font-weight: 800;
+}
+
+
+.section-b .card .face.face2 .name_label {
+    width: 12rem;
+}
+
+.section-b .card .face.face2 .price_label {
+    width: 8rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.section-b .card .face.face2 i {
+    color: var(--primary-color)
+}
+
+.section-b .card .face.face2 i:hover {
+    color: var(--secondary-color)
+}

@@ -8,14 +8,15 @@ const HeaderSearch = props => {
     e.preventDefault();
     console.log("submitted!");
     props.dispatch(getSearchResult)    
+    
   };
 
   return (
     <div>
-      <form
-        className="form-inline my-2 my-lg-0 search-form"
-        onSubmit={searchSubmit}
-      >
+    <form
+    className="form-inline my-2 my-lg-0 search-form"
+    onSubmit={searchSubmit}
+    >
         <div className="search-form">
           <span className="form-control-wrap">
             <input
