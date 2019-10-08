@@ -10,7 +10,7 @@ const AppRouter = () => {
   return (
     <BrowserRouter>
       <div>
-        <Header />
+        <Route component={Header} />
         <Switch>
           <Route path="/" component={HomePage} exact={true} />
           <Route path="/search/:id" component={SearchResultPage} />
