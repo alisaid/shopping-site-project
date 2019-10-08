@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
+import { Redirect } from "react-router-dom";
+
 import { setSearchText, getSearchResult } from "../store/actions/search";
 
 const HeaderSearch = props => {
-  
+  const [redirect, setRedirect] = useState(false);
+
   const searchSubmit = e => {
     e.preventDefault();
-    console.log("submitted!");
-    props.dispatch(getSearchResult)    
+    props.dispatch(getSearchResult);
+    setRedirect(true);
+    setTimeout(() => {
+      setRedirect(false);
+    }, 1000);
   };
 
   return (
@@ -34,6 +40,7 @@ const HeaderSearch = props => {
           </button>
         </div>
       </form>
+      {redirect && <Redirect to={`/search/${props.search.text}`} />}
     </div>
   );
 };

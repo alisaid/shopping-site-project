@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const HeaderLogo = () => {
   return (
@@ -9,7 +10,10 @@ const HeaderLogo = () => {
         alt="logo"
         id="header-img"
       />
-      <h1 className="logo">Gift House</h1>
+      <Link to="/">
+        {" "}
+        <h1 className="logo">Gift House</h1>
+      </Link>
     </div>
   );
 };
