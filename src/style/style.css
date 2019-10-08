@@ -196,6 +196,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .navbar .nav a {
@@ -205,6 +206,29 @@ img {
 
 .navbar .nav a:hover {
     color: var(--secondary-color)
+}
+
+.navbar .nav .cart_count {
+    position: absolute;
+    top:0;
+    right: 0;
+    background: var(--primary-color);
+    color:white;
+    padding: 0 0.5rem;
+    border-radius: 50%;
+    width:1.8rem;
+    height:1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.navbar .nav .cart_count p {
+    text-align: center;
+    width:1.8rem;
+    height:1.8rem;
+    margin: 0;
+    padding:0;      
 }
 
 /**SECTION**/

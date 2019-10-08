@@ -13,12 +13,11 @@ const Header = (props) => {
 
           <div className="nav">
             <a href="#">
-              <i className="fas fa-sign-in-alt fa-2x"></i>
-            </a>
-            <a href="#">
               <i className="fas fa-cart-arrow-down fa-2x"></i>
             </a>
-           <p> {props.data.length}</p>
+            <div className="cart_count" >
+              <p>{props.data.length}</p>
+            </div>
           </div>
         </div>
       </nav>
