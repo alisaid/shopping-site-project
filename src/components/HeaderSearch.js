@@ -6,13 +6,17 @@ import { setSearchText, getSearchResult } from "../store/actions/search";
 
 const HeaderSearch = props => {
   const [redirect, setRedirect] = useState(false);
+  console.log(props.search);
 
   const searchSubmit = e => {
     e.preventDefault();
     props.dispatch(getSearchResult);
-    setRedirect(true);    
+    setRedirect(true);
+    setTimeout(() => {
+      setRedirect(false);
+    }, 1000);
   };
-  
+
   return (
     <div>
       <form
@@ -37,7 +41,12 @@ const HeaderSearch = props => {
           </button>
         </div>
       </form>
-      {redirect && (props.search.searchResults.length > 0 ? <Redirect to={`/search/${props.search.text}`} /> : <Redirect to='/404' />)}
+      {redirect &&
+        (props.search.searchResults.length > 0 ? (
+          <Redirect to={`/search/${props.search.text}`} />
+        ) : (
+          <Redirect to="/404" />
+        ))}
     </div>
   );
 };
