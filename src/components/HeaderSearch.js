@@ -13,7 +13,7 @@ const HeaderSearch = props => {
       props.history.push(`/404`)
     }
   };
-  
+
   return (
     <div>
       <form
