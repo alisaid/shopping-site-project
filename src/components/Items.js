@@ -47,7 +47,7 @@ const Items = (props) => {
       </div>
 
       <div className="card-body face face2">
-        <Link to={`/item/${props.product.name}`} className="btn btn-primary name_label" onClick={handleOpenItem}>
+        <Link to={`/item/${props.product.id}`} className="btn btn-primary name_label" onClick={handleOpenItem}>
           <div className="name">{limitProductTitle(props.product.name)}</div>
         </Link>
         <div className="price_label">

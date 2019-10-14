@@ -7,6 +7,7 @@ import NotFoundPage from "../pages/NotFoundPage";
 import SearchResultPage from "../pages/SearchResultPage";
 import CategoryPage from "../pages/CategoryPage";
 import ShoppingCartPage from "../pages/ShoppingCartPage";
+import OrderPage from '../pages/OrderPage'
 
 const AppRouter = () => {
   return (
@@ -19,6 +20,7 @@ const AppRouter = () => {
           <Route path="/category/:id" component={CategoryPage} />
           <Route path="/item/:id" component={ProductDetailPage} />
           <Route path="/shoppingCart" component={ShoppingCartPage} />
+          <Route path="/order" component={OrderPage} />
           <Route component={NotFoundPage} />
         </Switch>
       </div>

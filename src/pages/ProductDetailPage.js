@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import QuantityForm from "../components/QuantityForm";
 import AddToCart from '../components/AddToCart'
+import BuyNow from '../components/BuyNow'
 
 const ProductDetailPage = props => {
   console.log(props.item.selectedItem)
@@ -38,7 +39,8 @@ const ProductDetailPage = props => {
                   <h3>Price: {props.item.selectedItem.price}</h3>
                 </span>
                 <QuantityForm />
-                <AddToCart />
+                <AddToCart product={props.item.selectedItem} />
+                <BuyNow />
                 </div>
         </div>
       </div>
