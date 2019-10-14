@@ -1,6 +1,8 @@
 import React from "react";
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 import { addToCart, removeFromCart  } from '../store/actions/cart'
+import { openItem } from '../store/actions/allData'
 
 
 const Items = (props) => {
@@ -30,6 +32,10 @@ const Items = (props) => {
     }    
   }
 
+  const handleOpenItem = () =>{
+    props.dispatch(openItem(props.product))
+  }
+
   return (
     <div className="card">
       <div className="face face1">
@@ -41,9 +47,9 @@ const Items = (props) => {
       </div>
 
       <div className="card-body face face2">
-        <a href="/" className="btn btn-primary name_label">
+        <Link to={`/item/${props.product.name}`} className="btn btn-primary name_label" onClick={handleOpenItem}>
           <div className="name">{limitProductTitle(props.product.name)}</div>
-        </a>
+        </Link>
         <div className="price_label">
           <div className="price">£{props.product.price}</div>
           <button className="btn btn-primary " onClick={handleAddCart}>

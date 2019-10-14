@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux'
-import { requestAllData } from './store/actions/isFetching'
+import { requestAllData } from './store/actions/allData'
 import AppRouter from './routers/AppRouter'
 
 
