@@ -18,3 +18,8 @@ export const requestAllData = (dispatch) => {
 export const recieveProducts = () => ({
     type: 'RECIEVE_PRODUCTS',
 })
+
+export const openItem = (item) => ({
+    type: 'OPEN_ITEM',
+    item
+})

@@ -5,6 +5,7 @@ import HomePage from "../pages/HomePage";
 import Header from "../components/Header";
 import NotFoundPage from "../pages/NotFoundPage";
 import SearchResultPage from "../pages/SearchResultPage";
+import CategoryPage from "../pages/CategoryPage";
 import ShoppingCartPage from "../pages/ShoppingCartPage";
 
 const AppRouter = () => {
@@ -15,9 +16,10 @@ const AppRouter = () => {
         <Switch>
           <Route path="/" component={HomePage} exact={true} />
           <Route path="/search/:id" component={SearchResultPage} />
-          <Route path="/productDetailPage" component={ProductDetailPage} />
+          <Route path="/category/:id" component={CategoryPage} />
+          <Route path="/item/:id" component={ProductDetailPage} />
           <Route path="/shoppingCart" component={ShoppingCartPage} />
-          <Route path="/404" component={NotFoundPage} />
+          <Route component={NotFoundPage} />
         </Switch>
       </div>
     </BrowserRouter>
