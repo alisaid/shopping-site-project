@@ -369,6 +369,9 @@ section .container {
 }
 
 .section-item .container .item-sidebar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 2rem;
     background: #ce5f31;
     color: whitesmoke;
@@ -376,16 +379,19 @@ section .container {
 }
 .price-label h3{
     text-align: center;
-    margin-top: 2rem;
 }
 
-.quantity-form, .addCart-form {
+.quantity-form, .addCart-form, .buyNow-form {
     width: 100%;
     display: inline-block;
     position: relative;
     border-radius: 20px;
     line-height: 0;
     margin-top: 2rem;
+    outline: 0
+}
+
+.quantity-form, .buyNow-form {
     background-color: var(--primary-color);
 }
 
@@ -431,7 +437,7 @@ section .container {
     border-radius: 0 20px 20px 0;
 }
 
-.addCart-form .btn-addCart {
+.addCart-form .btn-addCart, .btn-buyNow {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -454,5 +460,18 @@ section .container {
 }
 
 .addCart-form .btn-addCart:hover{
-    font-weight: 500;
+    font-weight: 600;
+}
+
+
+.buyNow-form .btn-buyNow p {
+    font-size: 1rem;
+    padding-left: 10px;
+    margin: auto 0;
+}
+
+.buyNow-form .btn-buyNow:hover {
+    font-weight: 600;
+    text-decoration: none;
+    color: whitesmoke;
 }
