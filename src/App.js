@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
+import { ConnectedRouter } from 'connected-react-router'
 import { connect } from 'react-redux'
-import { requestAllData } from './store/actions/isFetching'
+import { requestAllData } from './store/actions/allData'
 import AppRouter from './routers/AppRouter'
+import { history } from './store/ConfigureStore'
 
 
 function App(props) {
@@ -13,9 +15,9 @@ function App(props) {
 
   return (
 
-      <div>
+      <ConnectedRouter history={history}>
         <AppRouter />
-      </div>
+      </ConnectedRouter>
     );
 }
 
