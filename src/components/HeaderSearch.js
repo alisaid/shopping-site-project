@@ -1,18 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { setSearchText, getSearchResult } from "../store/actions/search";
 
 const HeaderSearch = props => {
-
   const searchSubmit = e => {
     e.preventDefault();
+
     props.dispatch(getSearchResult);
-    if(props.search.searchResults.length !== 0) {
-      props.history.push(`/search/${props.search.text}`)
-    }else{
-      props.history.push(`/404`)
-    }
   };
+
+  useEffect(() => {
+    if (props.search.searchResults.length !== 0) {
+      props.history.push(`/search/${props.search.text}`);
+    } else {
+      props.history.push("/");
+    }
+  }, [props.search.searchResults]);
 
   return (
     <div>

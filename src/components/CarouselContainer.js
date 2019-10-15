@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
-import { connect } from 'react-redux'
+import { connect } from "react-redux";
 
-const CarouselContainer = (props) => {
-
+const CarouselContainer = props => {
   const [index, setIndex] = useState(0);
   const [direction, setDirection] = useState(null);
 
@@ -40,9 +39,9 @@ const CarouselContainer = (props) => {
   );
 };
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
-    data: state.allData,
+    data: state.allData
   };
 };
 
