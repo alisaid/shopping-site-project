@@ -6,15 +6,7 @@ const Search = props => {
 
   const searchSubmit = e => {
     e.preventDefault();
-    props.dispatch(getSearchResult)
-    const getSearchResultPage = () => {
-        if(props.search.searchResults.length > 0) {
-        props.history.push(`/search/${props.search.text}`)
-      }else{
-        props.history.push(`/404`)
-      }
-    }
-    getSearchResultPage()
+    props.dispatch(getSearchResult)    
   };
 
   const render = () => {

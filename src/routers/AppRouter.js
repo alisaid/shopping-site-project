@@ -11,7 +11,7 @@ import OrderPage from '../pages/OrderPage'
 
 const AppRouter = () => {
   return (
-    <BrowserRouter>
+    <div>
       <div>
         <Route component={Header} />
         <Switch>
@@ -24,7 +24,7 @@ const AppRouter = () => {
           <Route component={NotFoundPage} />
         </Switch>
       </div>
-    </BrowserRouter>
+    </div>
   );
 };
 
