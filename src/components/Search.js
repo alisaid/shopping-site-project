@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { setSearchText, getSearchResult } from "../store/actions/search";
 
@@ -12,7 +12,7 @@ const Search = props => {
     if (props.search.searchResults.length !== 0) {
       props.history.push(`/search/${props.search.text}`);
     } else {
-      props.history.push("/");
+      props.history.push("/404");
     }
   }, [props.search.searchResults]);
 

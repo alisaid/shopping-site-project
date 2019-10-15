@@ -12,7 +12,7 @@ import OrderPage from '../pages/OrderPage'
 const AppRouter = () => {
   return (
     <div>
-      <div>
+      <BrowserRouter>
         <Route component={Header} />
         <Switch>
           <Route path="/" component={HomePage} exact={true} />
@@ -23,7 +23,7 @@ const AppRouter = () => {
           <Route path="/order" component={OrderPage} />
           <Route component={NotFoundPage} />
         </Switch>
-      </div>
+      </BrowserRouter>
     </div>
   );
 };
