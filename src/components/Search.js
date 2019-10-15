@@ -3,11 +3,18 @@ import { connect } from "react-redux";
 import { setSearchText, getSearchResult } from "../store/actions/search";
 
 const Search = props => {
-
   const searchSubmit = e => {
     e.preventDefault();
-    props.dispatch(getSearchResult)    
+    props.dispatch(getSearchResult);
   };
+
+  useEffect(() => {
+    if (props.search.searchResults.length !== 0) {
+      props.history.push(`/search/${props.search.text}`);
+    } else {
+      props.history.push("/");
+    }
+  }, [props.search.searchResults]);
 
   const render = () => {
     return (
@@ -36,9 +43,9 @@ const Search = props => {
         </form>
       </div>
     );
-  }
+  };
 
-  return render()
+  return render();
 };
 
 const mapStateToProps = state => {
