@@ -333,6 +333,9 @@ section .container {
 }
 
 /*SECTION-ITEM */
+.section-item {
+    margin-bottom: 5rem;
+}
 .section-item .container {
     display: grid;
     grid-template-columns: repeat(2,3fr) 2fr;

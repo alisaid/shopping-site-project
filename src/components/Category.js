@@ -14,7 +14,7 @@ const Category = props => {
             <Link to={`/category/${e.id}`} className="btn">
               <h3>{e.name}</h3>
             </Link>
-            <ItemsContainer name={e.name} products={products} />
+            <ItemsContainer id={e.id} products={products} />
           </div>
         );
       })}

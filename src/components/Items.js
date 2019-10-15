@@ -6,7 +6,6 @@ import { openItem } from '../store/actions/allData'
 
 
 const Items = (props) => {
-
   const limitProductTitle = (title, limit = 12) => {
     const newTitle = [];
 
@@ -33,7 +32,7 @@ const Items = (props) => {
   }
 
   const handleOpenItem = () =>{
-    props.dispatch(openItem(props.product))
+    props.dispatch(openItem(props))
   }
 
   return (

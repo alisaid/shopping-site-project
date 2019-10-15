@@ -21,5 +21,6 @@ export const recieveProducts = () => ({
 
 export const openItem = (item) => ({
     type: 'OPEN_ITEM',
-    item
+    item: item.product,
+    categoryId: item.categoryId
 })
