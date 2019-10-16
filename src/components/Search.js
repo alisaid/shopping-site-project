@@ -9,10 +9,16 @@ const Search = props => {
   };
 
   useEffect(() => {
-    if (props.search.searchResults.length !== 0) {
+    const inc = props.allData.products.every(
+      i => i.name.toLowerCase() === props.search.text.toLowerCase()
+    );
+
+    if (props.search.text === "") {
+      props.history.push(`/`);
+    } else if (inc) {
       props.history.push(`/search/${props.search.text}`);
-    } else {
-      props.history.push("/");
+    } else if (inc.length <= 0) {
+      props.history.push("/404");
     }
   }, [props.search.searchResults]);
 
@@ -50,7 +56,8 @@ const Search = props => {
 
 const mapStateToProps = state => {
   return {
-    search: state.search
+    search: state.search,
+    allData: state.allData
   };
 };
 
