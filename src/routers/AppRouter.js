@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import ScrollToTop from 'react-router-scroll-top'
 import ProductDetailPage from "../pages/ProductDetailPage";
 import HomePage from "../pages/HomePage";
 import Header from "../components/Header";
@@ -13,6 +14,7 @@ const AppRouter = () => {
   return (
     <div>
       <BrowserRouter>
+      <ScrollToTop>
         <Route component={Header} />
         <Switch>
           <Route path="/" component={HomePage} exact={true} />
@@ -23,6 +25,7 @@ const AppRouter = () => {
           <Route path="/order" component={OrderPage} />
           <Route component={NotFoundPage} />
         </Switch>
+        </ScrollToTop>
       </BrowserRouter>
     </div>
   );

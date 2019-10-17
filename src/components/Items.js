@@ -37,6 +37,7 @@ const Items = (props) => {
 
   return (
     <div className="card">
+    <Link to={`/item/${props.product.id}`} onClick={handleOpenItem}>
       <div className="face face1">
         <img
           src={props.product.images[0]}
@@ -44,7 +45,7 @@ const Items = (props) => {
           className="card-img-top"
         />
       </div>
-
+    </Link>
       <div className="card-body face face2">
         <Link to={`/item/${props.product.id}`} className="btn btn-primary name_label" onClick={handleOpenItem}>
           <div className="name">{limitProductTitle(props.product.name)}</div>

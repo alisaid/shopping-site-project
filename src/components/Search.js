@@ -11,8 +11,6 @@ const Search = props => {
   useEffect(() => {
     if (props.search.searchResults.length !== 0) {
       props.history.push(`/search/${props.search.text}`);
-    } else {
-      props.history.push("/404");
     }
   }, [props.search.searchResults]);
 

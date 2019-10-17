@@ -34,7 +34,7 @@ const ProductDetailPage = props => {
                   <button>
                     <img
                       src={i}
-                      alt="my image"
+                      alt="my_image"
                       onClick={() => setImage(index)}
                     />
                   </button>

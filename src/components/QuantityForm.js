@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 
-const QuantityForm = () => {
+const QuantityForm = () => {  
+
+  const [quantity, setQuantity] = useState(1)
   return (
     <div className="quantity-form">
-      <button className="btn btn-decrease" title="decrease">
+      <button className="btn btn-decrease" title="decrease" onClick={() => setQuantity(quantity - 1)}>
         <i className="fas fa-minus"></i>
       </button>
       <span className="form-control-wrap">
-        <input id="quantity" name="quantity" type="text" value="1" className="form-control"/>
+        <input id="quantity" name="quantity" type="number" value={quantity} min={1} className="form-control"/>
       </span>
-      <button className="btn btn-increase" title="increase">
+      <button className="btn btn-increase" title="increase" onClick={() => setQuantity(quantity + 1)}>
         <i className="fas fa-plus"></i>
       </button>
     </div>
