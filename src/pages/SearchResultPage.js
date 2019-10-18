@@ -6,7 +6,7 @@ const SearchResultPage = props => {
   return (
     <div className="section-b">
       <div className="container">
-        <ItemsContainer products={props.data.searchResults} />
+        <ItemsContainer products={props.search.searchResults} />
       </div>
     </div>
   );
@@ -14,7 +14,7 @@ const SearchResultPage = props => {
 
 const mapStateToProps = state => {
   return {
-    data: state.search
+    search: state.search
   };
 };
 

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
-import QuantityForm from "../components/QuantityForm";
 import AddToCart from "../components/AddToCart";
 import BuyNow from "../components/BuyNow";
 import Category from "../components/Category";
@@ -50,8 +49,7 @@ const ProductDetailPage = props => {
             <div>
               <span className="price-label">
                 <h3>Price: {props.item.selectedItem.price}</h3>
-              </span>
-              <QuantityForm />
+              </span>            
               <AddToCart product={props.item.selectedItem} />
               <BuyNow />
             </div>

@@ -307,7 +307,7 @@ section .container {
 }
 
 .section-b .card .face.face2 .btn:hover {
-  font-weight: 800;
+  text-decoration: underline;
 }
 
 .section-b .card .face.face2 .name_label {
@@ -353,14 +353,16 @@ section .container {
 }
 
 .section-item .container .image-container .images .image {
-    width: 25%;
-    overflow: hidden;
-    border: 1px solid var(--primary-color);
+  width: 25%;
+  overflow: hidden;
+  border: 1px solid var(--primary-color);
+  height:auto
 }
 
-.section-item .container .image-container .images .image img {
+.section-item .container .image-container .images .image button {
     width:100%;
     border:none;
+    height:80px
 }
 
 .section-item .container .description-container {
@@ -459,8 +461,8 @@ section .container {
     margin: auto 0;
 }
 
-.addCart-form .btn-addCart:hover{
-    font-weight: 600;
+.addCart-form .btn-addCart:hover p{
+    text-decoration: underline;
 }
 
 
@@ -470,8 +472,6 @@ section .container {
     margin: auto 0;
 }
 
-.buyNow-form .btn-buyNow:hover {
-    font-weight: 600;
-    text-decoration: none;
-    color: whitesmoke;
+.buyNow-form .btn-buyNow:hover p{
+    text-decoration: underline;
 }

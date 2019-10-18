@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { addToCart, removeFromCart  } from '../store/actions/cart'
+import { addToCart } from '../store/actions/cart'
 import { openItem } from '../store/actions/allData'
 
 
@@ -23,12 +23,7 @@ const Items = (props) => {
   };
 
   const handleAddCart = () => {
-    if(props.data.findIndex(i => i.id === props.product.id) > -1) {
-      props.dispatch(removeFromCart(props.product.id))
-    }else{
-      props.dispatch(addToCart(props.product))
-      console.log(props.data)
-    }    
+      props.dispatch(addToCart(props.product))  
   }
 
   const handleOpenItem = () =>{
@@ -53,7 +48,7 @@ const Items = (props) => {
         <div className="price_label">
           <div className="price">£{props.product.price}</div>
           <button className="btn btn-primary " onClick={handleAddCart}>
-            {props.data.findIndex(i => i.id === props.product.id) > -1 ? <i className="fas fa-minus-circle"></i> : <i className="fas fa-plus-circle"></i> }
+            <i className="fas fa-plus-circle"></i>
           </button>
         </div>
       </div>

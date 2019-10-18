@@ -8,20 +8,14 @@ const Search = props => {
     props.dispatch(getSearchResult);
   };
 
+  
   useEffect(() => {
-    const inc = props.allData.products.every(
-      i => i.name.toLowerCase() === props.search.text.toLowerCase()
-    );
-
     if (props.search.text === "") {
       props.history.push(`/`);
-    } else if (inc) {
+    } else if (props.search.searchResults.length > 0) {
       props.history.push(`/search/${props.search.text}`);
-<<<<<<< HEAD
-=======
-    } else if (inc.length <= 0) {
+    } else {
       props.history.push("/404");
->>>>>>> 2f6a968a3b6e0c325ed540e1c02441dc61beef6e
     }
   }, [props.search.searchResults]);
 
