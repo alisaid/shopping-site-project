@@ -8,8 +8,11 @@ const Search = props => {
     props.dispatch(getSearchResult);
   };
 
+  
   useEffect(() => {
-    if (props.search.searchResults.length !== 0) {
+    if (props.search.text === "") {
+      props.history.push(`/`);
+    } else if (props.search.searchResults.length > 0) {
       props.history.push(`/search/${props.search.text}`);
     } else {
       props.history.push("/404");
@@ -50,7 +53,8 @@ const Search = props => {
 
 const mapStateToProps = state => {
   return {
-    search: state.search
+    search: state.search,
+    allData: state.allData
   };
 };
 

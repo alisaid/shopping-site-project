@@ -1,25 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { connect } from 'react-redux'
-import { addToCart, removeFromCart } from '../store/actions/cart'
+import { addToCart } from '../store/actions/cart'
+import QuantityForm from "../components/QuantityForm";
+
 
 
 const AddToCart = (props) => {
-
-    const handleAddCart = () => {
-        console.log(props)
-        if(props.data.findIndex(i => i.id === props.product.id) > -1) {
-          props.dispatch(removeFromCart(props.product.id))
-        }else{
-          props.dispatch(addToCart(props.product))
-          console.log(props.data)
-        }    
+    const [quantity, setQuantity] = useState(1)
+    const handleAddCart = (product, quantity) => {
+        for(let i = 1; i <= quantity; i++)
+          props.dispatch(addToCart(product)) 
       }
     return (
-        <div className="addCart-form">
-            <a href="#" className="btn-addCart" onClick={handleAddCart}>
-                <i className="fas fa-cart-arrow-down fa-2x"></i>
-                <p>Add To Cart</p>
-            </a>          
+        <div className="input-group">          
+            <QuantityForm quantity={quantity} setQuantity={setQuantity}/>
+            <div className="addCart-form">
+                <a className="btn-addCart" onClick={() => handleAddCart(props.product, quantity)}>
+                    <i className="fas fa-cart-arrow-down fa-2x"></i>
+                    <p>Add To Cart</p>
+                </a>          
+            </div>
         </div>
     )
 }
