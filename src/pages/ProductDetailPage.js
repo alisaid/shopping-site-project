@@ -5,7 +5,6 @@ import BuyNow from "../components/BuyNow";
 import Category from "../components/Category";
 
 const ProductDetailPage = props => {
-  console.log(props);
   const [selectedImage, setSelectedImage] = useState(0);
   const setImage = i => {
     setSelectedImage(i);

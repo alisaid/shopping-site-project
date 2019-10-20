@@ -1,13 +1,17 @@
 import React, { useState } from 'react'
 import { connect } from 'react-redux'
-import { addToCart } from '../store/actions/cart'
+import { addToCart, removeFromCart } from '../store/actions/cart'
 import QuantityForm from "../components/QuantityForm";
 
 
 
 const AddToCart = (props) => {
-    const [quantity, setQuantity] = useState(1)
-    const handleAddCart = (product, quantity) => {
+    const [quantity, setQuantity] = useState(props.product.quantity)
+    
+    const handleAddCart = (product, quantity = 1) => {
+        quantity = parseInt(quantity)
+        props.dispatch(removeFromCart(product.id))
+
         for(let i = 1; i <= quantity; i++)
           props.dispatch(addToCart(product)) 
       }
