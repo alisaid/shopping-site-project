@@ -44,7 +44,7 @@ const ProductDetailPage = props => {
             <h3>{props.item.selectedItem.name}</h3>
             <p>{props.item.selectedItem.description}</p>
           </div>
-          <div className="item-sidebar">
+          <div className="buy-box">
             <div>
               <span className="price-label">
                 <h3>Price: {props.item.selectedItem.price}</h3>

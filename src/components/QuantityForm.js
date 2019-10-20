@@ -9,6 +9,7 @@ const QuantityForm = (props) => {
       <select onChange={e => props.setQuantity(e.target.value)} value={props.quantity}>
       {options.map(o =><option key={o}>{o}</option> )}
       </select>
+      <p>Qty</p>
     </div>
   );
 };
