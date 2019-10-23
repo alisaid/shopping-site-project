@@ -64,6 +64,7 @@ img {
 
 .button:hover {
   text-decoration: underline;
+  background-color: var(--primary-color);
 }
 
 /**ISLOADING**/
@@ -518,4 +519,20 @@ section .container {
   top: 2rem;
   bottom: 2rem;
   left:0px;
+}
+
+.order-page .container {
+  margin-top:2rem;
+  margin-bottom: 4rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap:2rem;
+}
+
+.order-page .container .section-right {
+  display: border-box;
+  align-items: center;
+  text-align: center;
+  padding: 5rem 0 2rem 3rem;
+  position: relative;
 }
