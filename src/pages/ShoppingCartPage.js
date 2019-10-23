@@ -87,7 +87,3 @@ const mapStateToProps = state => {
 
 export default connect(mapStateToProps)(ShoppingCartPage);
 
-// {
-// <div className="col-md-4">
-// <img src={e.images.slice(0, 1)} key={e.id} alt={e.name} />{" "}
-// </div>}
