@@ -1,5 +1,6 @@
 import React from "react";
 import ItemsContainer from "./ItemsContainer";
+import { Link } from 'react-router-dom'
 
 const Category = props => {
   return (
@@ -10,10 +11,10 @@ const Category = props => {
         const products = e.items.slice(start, end);
         return (
           <div className="category-wrapper" key={e.id}>
-            <a href="/" className="btn">
+            <Link to={`/category/${e.id}`} className="btn">
               <h3>{e.name}</h3>
-            </a>
-            <ItemsContainer name={e.name} products={products} />
+            </Link>
+            <ItemsContainer id={e.id} products={products} />
           </div>
         );
       })}
