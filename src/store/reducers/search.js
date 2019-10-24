@@ -13,7 +13,7 @@ export default (state = searchReducerDefaultState, action) => {
             return state = {...state, searchResults: action.searchResults}            
         }
         case 'ERROR': {
-            return state = {...state, error: action.searchResults}
+            return state = {...state, error: action.message}
         }
         default:
             return state;

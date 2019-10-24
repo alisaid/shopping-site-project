@@ -5,13 +5,16 @@ import search from './reducers/search'
 import cart from './reducers/cart'
 
 const middleware = applyMiddleware(thunk)
+
+const createRootReducer = () => combineReducers({
+    allData: allData,
+    search: search,
+    cart: cart
+})
 export default () => {
     const store = createStore (
-        combineReducers({
-            allData: allData,
-            search: search,
-            cart: cart
-        }), middleware
+        createRootReducer()
+        , middleware
     );
     return store
 }

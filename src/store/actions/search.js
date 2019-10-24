@@ -18,6 +18,6 @@ export const getSearchResult = (dispatch, getState) => {
       });
     })
     .catch(err => {
-      dispatch({ type: "ERROR", searchResults: err });
+      dispatch({ type: "ERROR", message: err.message || 'Something went wrong.' });
     });
 };
