@@ -15,16 +15,3 @@ const QuantityForm = (props) => {
 };
 
 export default QuantityForm;
-
-
-// {
-//   <button className="btn btn-decrease" title="decrease" onClick={() => setQuantity(quantity - 1)}>
-//         <i className="fas fa-minus"></i>
-//       </button>
-//       <span className="form-control-wrap">
-//         <input id="quantity" name="quantity" type="number" value={quantity} min={1} className="form-control"/>
-//       </span>
-//       <button className="btn btn-increase" title="increase" onClick={() => setQuantity(quantity + 1)}>
-//         <i className="fas fa-plus"></i>
-//       </button>
-// }

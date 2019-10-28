@@ -1,18 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
 import QuantityForm from "../components/QuantityForm";
-import { addToCart, removeFromCart } from "../store/actions/cart";
+import { addToCart, deleteAll } from "../store/actions/cart";
 import BuyNow from "../components/BuyNow";
 
-const ShoppingCartPage = props => {
-  const myOrderedArray = props.data.reduce(function(accumulator, currentValue) {
-    if (accumulator.indexOf(currentValue) === -1) {
-      accumulator.push(currentValue);
-    }
-    return accumulator;
-  }, []);
+const ShoppingCartPage = props => {  
 
-  const totalPrice = myOrderedArray.reduce((acc, curVal) => {
+  const totalPrice = props.data.reduce((acc, curVal) => {
     const price = Number(curVal.price);
     const itemTotalPrice = price * curVal.quantity;
     return acc + itemTotalPrice;
@@ -23,20 +17,16 @@ const ShoppingCartPage = props => {
       <div className="container">
       {props.data.length === 0 ? <h3>You don't have any items in your cart.</h3>: 
         <section className="section-left">
-          {myOrderedArray.map(e => {
+          {props.data.map(e => {
             const handleRemove = () => {
-              props.dispatch(removeFromCart(e.id));
+              props.dispatch(deleteAll(e.id));
             };
 
-            const setQuantity = quantity => {
-              quantity = parseInt(quantity);
-              handleRemove();
-
-              for (let i = 1; i <= quantity; i++) {
-                props.dispatch(addToCart(e));
-              }
-            };
-
+            const setQuantity =  (quantity = 1) => { 
+                const qnty = Number(quantity) 
+                props.dispatch(addToCart(e, qnty))
+            }
+            
             return (
               <div
                 className="card mb-3"
@@ -68,8 +58,7 @@ const ShoppingCartPage = props => {
         <section className="section-right">
         <div id="border"></div>
           <h3>
-            Subtotal <br/>({myOrderedArray.length} Item(s) / {props.data.length}{" "}
-            piece(s)):
+            Subtotal <br/>({props.data.length} Item(s):
           </h3>
           <h1>£{totalPrice.toFixed(2)}</h1>
           <BuyNow />

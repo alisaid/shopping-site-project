@@ -5,6 +5,10 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 
 const Header = props => {
+  let totalQuantity = 0
+  props.data.map(i => {
+    totalQuantity = totalQuantity + i.quantity
+  })
   return (
     <div>
       <nav className="navbar fixed-top">
@@ -15,7 +19,7 @@ const Header = props => {
           <Link to="/shoppingCart">
                 <i className="fas fa-cart-arrow-down fa-2x"></i>
               <div className="cart_count">
-                <p>{props.data.length}</p>
+                <p>{totalQuantity}</p>
               </div>
               </Link>
             </div>

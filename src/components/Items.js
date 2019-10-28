@@ -22,7 +22,7 @@ const Items = (props) => {
     return title;
   };
 
-  const handleAddCart = () => {
+  const handleAddCart = () => {    
       props.dispatch(addToCart(props.product))  
   }
 
