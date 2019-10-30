@@ -58,7 +58,7 @@ img {
   background-color: var(--primary-color);
   color: whitesmoke;
   outline: none;
-  border:none;
+  border: none;
   border-radius: 0.5rem;
 }
 
@@ -345,115 +345,116 @@ section .container {
 
 /*SECTION-ITEM */
 .section-item {
-    margin-bottom: 5rem;
-    margin-top: 2rem;
+  margin-bottom: 5rem;
+  margin-top: 2rem;
 }
 .section-item .container {
-    display: grid;
-    grid-template-columns: repeat(2,3fr) 2fr;
+  display: grid;
+  grid-template-columns: repeat(2, 3fr) 2fr;
 }
 
-.section-item .container .image-container{
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    display:flex;
-    flex-direction: column;
+.section-item .container .image-container {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .section-item .container .image-container .images {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .section-item .container .image-container .images .image {
   width: 25%;
   overflow: hidden;
   border: 1px solid var(--primary-color);
-  height:auto
+  height: auto;
 }
 
 .section-item .container .image-container .images .image button {
-    width:100%;
-    border:none;
-    height:80px
+  width: 100%;
+  border: none;
+  height: 80px;
 }
 
 .section-item .container .description-container {
-    padding: 3rem;
-    display: inline-block;
+  padding: 3rem;
+  display: inline-block;
 }
 
 .section-item .container .buy-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-    background: #ce5f31;
-    color: whitesmoke;
-    border-radius: 7%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: #ce5f31;
+  color: whitesmoke;
+  border-radius: 7%;
 }
-.price-label h3{
-    text-align: center;
-}
-
-.input-group{
-  margin-top: 2rem
+.price-label h3 {
+  text-align: center;
 }
 
-.addCart-form, .buyNow-form {
-    width: 100%;
-    display: inline-block;
-    position: relative;
-    border-radius: 20px;
-    line-height: 0;
-    margin-top: 2rem;
-    outline: 0
+.input-group {
+  margin-top: 2rem;
+}
+
+.addCart-form,
+.buyNow-form {
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  border-radius: 20px;
+  line-height: 0;
+  margin-top: 2rem;
+  outline: 0;
 }
 
 .buyNow-form {
-    background-color: var(--primary-color);
+  background-color: var(--primary-color);
 }
 
-.addCart-form .btn-addCart, .btn-buyNow {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 1rem;
-    outline: 0;
-    border: 0;
-    cursor: pointer;
-    color: whitesmoke;
-    background-color: transparent;
-    font-size: 1rem;
-    text-align: center;
-    text-decoration: none;
+.addCart-form .btn-addCart,
+.btn-buyNow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 1rem;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  color: whitesmoke;
+  background-color: transparent;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
 }
 
 .addCart-form .btn-addCart p {
-    font-size: 1rem;
-    padding-left: 10px;
-    margin: auto 0;
+  font-size: 1rem;
+  padding-left: 10px;
+  margin: auto 0;
 }
 
-.addCart-form .btn-addCart:hover p{
-    text-decoration: underline;
+.addCart-form .btn-addCart:hover p {
+  text-decoration: underline;
 }
-
 
 .buyNow-form .btn-buyNow p {
-    font-size: 1rem;
-    padding-left: 10px;
-    margin: auto 0;
+  font-size: 1rem;
+  padding-left: 10px;
+  margin: auto 0;
 }
 
-.buyNow-form .btn-buyNow:hover p{
-    text-decoration: underline;
+.buyNow-form .btn-buyNow:hover p {
+  text-decoration: underline;
 }
 
-.quantity-form{
+.quantity-form {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -462,7 +463,7 @@ section .container {
 
 .quantity-form select {
   padding: 0.5rem;
-  margin-right: 0.5rem
+  margin-right: 0.5rem;
 }
 
 .quantity-form p {
@@ -470,40 +471,39 @@ section .container {
   padding: 0.2rem 0.5rem;
   background-color: whitesmoke;
   color: var(--primary-color);
-  outline: 1px solid var(--primary-color)
+  outline: 1px solid var(--primary-color);
 }
 /* SHOPPING CART PAGE */
 
 .cart-page .container {
-  margin-top:2rem;
+  margin-top: 2rem;
   display: grid;
   grid-template-columns: 2fr 1fr;
-  grid-gap:2rem;
+  grid-gap: 2rem;
 }
 
 .cart-page .container .section-left .card-body {
   display: grid;
   grid-template-columns: 3fr 1fr;
-  grid-gap: 1rem
+  grid-gap: 1rem;
 }
 
 .cart-page .container .section-left .card-body .card-bottom {
   display: flex;
   align-items: center;
   justify-content: left;
-  margin-top: 2rem
+  margin-top: 2rem;
 }
 
 .cart-page .container .section-left .card-body .card-bottom .quantity-form {
-  margin: 0 1.5rem 0 0 
+  margin: 0 1.5rem 0 0;
 }
 
-.cart-page .container .section-left .card-body .item-price{
-  display:flex;
+.cart-page .container .section-left .card-body .item-price {
+  display: flex;
   align-items: center;
   justify-content: center;
 }
-
 
 .cart-page .container .section-right {
   display: border-box;
@@ -513,20 +513,20 @@ section .container {
   position: relative;
 }
 
-#border  {
+#border {
   border-left: 3px solid var(--secondary-color);
   position: absolute;
   top: 2rem;
   bottom: 2rem;
-  left:0px;
+  left: 0px;
 }
 
 .order-page .container {
-  margin-top:2rem;
+  margin-top: 2rem;
   margin-bottom: 4rem;
   display: grid;
   grid-template-columns: 2fr 1fr;
-  grid-gap:2rem;
+  grid-gap: 2rem;
 }
 
 .order-page .container .section-right {
@@ -536,3 +536,5 @@ section .container {
   padding: 5rem 0 2rem 3rem;
   position: relative;
 }
+
+/* ERROR MODAL */
